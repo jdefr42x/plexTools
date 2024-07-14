@@ -48,7 +48,7 @@ function Export-PlexPlaylists {
     Write-Output "Error loading configuration: $_"
     break
   }
-  <#
+
   $headers = @{
     "Accept"       = "application/json"
     "X-Plex-Token" = "$token"
@@ -93,5 +93,4 @@ function Export-PlexPlaylists {
     Set-Content -Path $outputFile -Value $playlistContent
     Write-Host "End of processing of the $playlistName playlist."
   }
-  #>
 }
